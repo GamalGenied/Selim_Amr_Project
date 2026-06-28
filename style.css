@@ -1,8 +1,9 @@
 /* ============================================================
    SELIM AMR — LANDING PAGE STYLESHEET
    Color palette:
-     Primary   : #0A1628  (deep navy)
-     Secondary : #0E2A4A  (mid navy)
+     Primary   : #1E1E1E  (dark gray)
+     Secondary : #252525  (mid gray)
+     Card      : #2A2A2A  (card gray)
      Accent    : #00C9A7  (teal)
      Accent 2  : #C9A84C  (soft gold)
      Text-light: #B0BEC5
@@ -13,15 +14,15 @@
    1. CSS CUSTOM PROPERTIES (Design Tokens)
 -------------------------------------------------- */
 :root {
-  --color-bg:           #0A1628;
-  --color-bg-2:         #0E2A4A;
-  --color-bg-card:      #101f38;
+  --color-bg:           #1E1E1E;
+  --color-bg-2:         #252525;
+  --color-bg-card:      #2A2A2A;
   --color-accent:       #00C9A7;
   --color-accent-gold:  #C9A84C;
   --color-white:        #FFFFFF;
   --color-text:         #E2E8F0;
-  --color-text-muted:   #8899AA;
-  --color-border:       rgba(255, 255, 255, 0.08);
+  --color-text-muted:   #9AA3AD;
+  --color-border:       rgba(255, 255, 255, 0.10);
 
   --font-family: 'Inter', sans-serif;
 
@@ -30,7 +31,7 @@
   --radius-lg:   20px;
   --radius-full: 9999px;
 
-  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.40);
   --shadow-btn:  0 4px 20px rgba(0, 201, 167, 0.35);
 
   --transition-fast:   0.2s ease;
@@ -203,10 +204,10 @@ img, svg { display: block; max-width: 100%; }
 
 /* Glassmorphism effect — applied via JS when scrolling */
 .navbar.scrolled {
-  background: rgba(10, 22, 40, 0.75);
+  background: rgba(20, 20, 20, 0.80);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 }
 
 .nav-container {
@@ -483,9 +484,9 @@ img, svg { display: block; max-width: 100%; }
 /* Real headshot photo */
 .about-photo {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card), 0 0 0 1px var(--color-border);
   display: block;
@@ -731,7 +732,7 @@ textarea:focus {
    11. FOOTER
 -------------------------------------------------- */
 .footer {
-  background: #060E1C;
+  background: #141414;
   padding: 48px 0;
   border-top: 1px solid var(--color-border);
 }
